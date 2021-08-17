@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="p-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Enter URL Here</div>
+        <%= form_with model: @link, remote: true do |form| %>
+          <%= form.text_field :original_url, placeholder: "http://google.com", class: "form-control" %>
+          <%= form.submit "Generate Link", class:"btn btn-primary mt-3"%>
+        <% end %> 
+        <div id="error_msg"></div> 
+      </div>  
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Shortern URL</div>
+        <div id="tiny_url"></div> 
+      </div>  
+    </div>
+  </div>
+</div>
+  
