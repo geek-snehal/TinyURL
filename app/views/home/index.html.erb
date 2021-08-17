@@ -2,6 +2,9 @@
   <div class="p-5">
     <div class="card">
       <div class="card-body">
+        <% if flash[:error].present? %>
+          <div class="error"><%= flash[:error] %></div>
+        <% end %>
         <div class="card-title">Enter URL Here</div>
         <%= form_with model: @link, remote: true do |form| %>
           <%= form.text_field :original_url, placeholder: "http://google.com", class: "form-control" %>
