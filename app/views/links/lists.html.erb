@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="p-5">
+    <div class="card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Tiny URL</th>
+              <th scope="col">Original URL</th>
+              <th scope="col">View Visitors</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @links.each do |link| %>
+              <tr>
+                <td><%= @short_link %>/<%= link.token %></td>
+                <td><%= link.original_url %></td>
+                <td><%= link_to "View", "/#{link.token}/info" %></td>
+              </tr>
+            <% end %>  
+          </tbody>
+      </div>  
+    </div>
+  </div>
+</div>
+  
