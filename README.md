@@ -5,20 +5,22 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.6.0
 
-* System dependencies
+* Rails version - 6.0.4
 
-* Configuration
+* Database - Mysql
 
-* Database creation
+* Database creation steps
+    - rake db:create
+    - rake db:migrate
 
-* Database initialization
+* Start Server
+     - rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To Run the application follow below steps:
+     - Generate tiny url of your link by clicking on 'Generate Link' button.
+     - Copy the generated url and paste it in your browser and it will redirect you to original url.
+     - User following route to check visitors of your link.
+       > {host}/:token/info
+    
